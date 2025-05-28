@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ book.title }}</title>
+</head>
+<body>
+    <h1>{{ book.title }}</h1>
+    <p><strong>Автор:</strong> {{ book.author }}</p>
+    <p><strong>Год издания:</strong> {{ book.published_year }}</p>
+    <p>{{ book.description }}</p>
+    <a href="{% url 'book_update' book.pk %}">Изменить</a>
+    <a href="{% url 'book_delete' book.pk %}">Удалить</a>
+    <br>
+    <a href="{% url 'book_list' %}">Назад к списку</a>
+</body>
+</html>
